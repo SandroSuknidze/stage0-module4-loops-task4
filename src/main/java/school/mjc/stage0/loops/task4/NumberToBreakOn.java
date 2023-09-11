@@ -4,16 +4,14 @@ public class NumberToBreakOn {
     public void printNumbersUntilWithBreakOn(int toBreakWith, int numberToGoUntil) {
         if (numberToGoUntil < toBreakWith) {
             System.out.println("iterating till the end");
-            for (int i = 1; i <= numberToGoUntil; i++) {
+        }
+
+        for (int i = 1; i <= numberToGoUntil; i++) {
+            if (i == toBreakWith && numberToGoUntil >= toBreakWith) {
                 System.out.println(i);
+                break;
             }
-        } else {
-            for (int i = 1; i <= numberToGoUntil; i++) {
-                if (i == toBreakWith) {
-                    break;
-                }
-                System.out.println(i);
-            }
+            System.out.println(i);
         }
     }
 }
